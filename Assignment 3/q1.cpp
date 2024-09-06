@@ -13,27 +13,31 @@ class Student
     {
 
     }
-    Student(int rollno, char* name, float marks)
+    Student(int rollno, const char* name, float marks)
     {
         //Using this pointer
         this->rollno=rollno;
-        this->name=name;
+        //Perform deep copying of name
+        this->name = new char[strlen(name) + 1]; // +1 for null terminator
+        strcpy(this->name, name);
         this->marks=marks;
     }
     void display()
     {
-        cout<<"Rollno: "<<rollno;
-        cout<<"Name: "<<name;
-        cout<<"Marks: "<<marks;
+        cout<<"Rollno: "<<rollno<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Marks: "<<marks<<endl;
     }
 };
 
 int main()
 {
-    Student s1(100,"Rehnoor Aulakh",97);
+    const char *name="PQR";
+    Student s1(100,name,97);
     s1.display();
     //dot operator
-    Student *s2=new Student(101,"ABC",95);
+    const char *name2="ABC";
+    Student *s2=new Student(101,name2,95);
     s2->display();
     //Arrow operator
 
