@@ -1,1 +1,1 @@
-# Object-Oriented-Programming
+This repository contains the solutions to all the Assignments and PYQs of Object Oriented Programming for the students of Thapar University.
