@@ -23,13 +23,12 @@ class Complex
     {
         cout <<real<<" + "<<imag<< "i"<<endl;
     }
-    friend Complex sum(const Complex& c1, const Complex& c2);
+    friend void sum(const Complex& c1, const Complex& c2);
 };
 
-Complex sum(const Complex& c1, const Complex& c2)
+void sum(const Complex& c1, const Complex& c2)
 {
-    Complex c3(c1.real+c2.real,c1.imag+c2.imag);
-    return c3;
+    cout<<c1.real+c2.real<<" + "<< c1.imag+c2.imag<<"i";
 }
 
 int main()
@@ -40,8 +39,8 @@ int main()
     c1.display();
     cout<<"c2: "<<endl;
     c2.display();
+    cout<<"Sum of c1 and c2 is ";
+    sum(c1,c2);
+    cout<<endl;
 
-    Complex c3=sum(c1,c2);
-    cout<<"Sum of c1 and c2 is "<<endl;
-    c3.display();
 }
