@@ -15,6 +15,14 @@ class Matrix
     {
         return p[i][j];
     }
+    ~Matrix()
+    {
+        for(int i=0;i<d1;i++)
+        {
+            delete p[i];
+        }
+        delete p;
+    }
 };
 
 Matrix::Matrix(int x, int y)
