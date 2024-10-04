@@ -188,7 +188,7 @@ int main()
 {
     Library lib(100,100);
     lib.addBook("Godfather","Mario Puzo",1231);
-    lib.addBook("Rich Dad Poor Dad","Robert Kiosaki",1234);
+    lib.addBook("Data Structures","Narasimha Karumanchi",1234);
     lib.addBook("Object Oriented Programming","E Balagurusamy",1235);
     lib.addBook("Operating System","Galvin",1236);
     lib.searchBook(1234);
