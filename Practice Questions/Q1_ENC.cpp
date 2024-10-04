@@ -40,8 +40,8 @@ class Library
     {
         b_pos=0;
         m_pos=0;
-        b=new Book[books+1];
-        m=new Member[members+1];
+        b=new Book[books];
+        m=new Member[members];
         cout<<"Library Created with "<<books<<" books and "<<members<<" members"<<endl;
     }
     void addBook(string name,string author, int ISBN)
